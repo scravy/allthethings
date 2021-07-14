@@ -1,7 +1,7 @@
 import datetime
 import unittest
 
-from various.ranges import range_incl, range_excl
+from allthethings.ranges import range_incl, range_excl
 
 
 class UuidTestCase(unittest.TestCase):

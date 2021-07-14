@@ -3,7 +3,7 @@ test: lint
 
 coverage:
 	rm -f .coverage
-	coverage run --branch --source=various -m unittest discover
+	coverage run --branch --source=allthethings -m unittest discover
 	coverage report | tee coverage.txt
 	coverage html
 

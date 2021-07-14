@@ -16,18 +16,18 @@ with open("README.md", "r") as fh:
         long_description = before + after
 
 __pkginfo__ = {}
-with open("various/__pkginfo__.py") as fh:
+with open("allthethings/__pkginfo__.py") as fh:
     exec(fh.read(), __pkginfo__)
 
 setuptools.setup(
-    name="various",
+    name="allthethings",
     version=__pkginfo__['__version__'],
     author="Julian Fleischer",
     author_email="tirednesscankill@warhog.net",
     description="Various utilities",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/scravy/various",
+    url="https://github.com/scravy/allthethings",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

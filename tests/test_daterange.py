@@ -2,8 +2,8 @@ import datetime
 import unittest
 from typing import List
 
-from various.daterange import DateRange
-from various.dates import read_date
+from allthethings.daterange import DateRange
+from allthethings.dates import read_date
 
 
 class TestDateRange(unittest.TestCase):
