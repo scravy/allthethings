@@ -1,5 +1,4 @@
-from collections import Callable, Iterable
-from typing import TypeVar, Dict, List
+from typing import TypeVar, Dict, List, Iterable, Callable
 
 U = TypeVar('U')
 R = TypeVar('R')
