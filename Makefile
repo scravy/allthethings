@@ -8,7 +8,7 @@ coverage:
 	coverage html
 
 lint:
-	pylint --disable=C,R,W apm
+	pylint --disable=C,R,W allthethings
 
 venv:
 	python3 -m venv .venv
