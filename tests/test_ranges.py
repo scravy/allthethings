@@ -4,7 +4,7 @@ import unittest
 from allthethings.ranges import range_incl, range_excl
 
 
-class UuidTestCase(unittest.TestCase):
+class RangesTestCase(unittest.TestCase):
 
     def test_range_incl_with_dates(self):
         ds = list(range_incl(datetime.date(2020, 2, 27), datetime.date(2020, 3, 2)))
