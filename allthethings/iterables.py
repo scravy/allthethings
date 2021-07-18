@@ -1,7 +1,13 @@
+from itertools import takewhile, islice, repeat
 from typing import TypeVar, Dict, List, Iterable, Callable, Iterator
 
 U = TypeVar('U')
 R = TypeVar('R')
+
+
+def grouper(iterable: Iterable[U], n) -> Iterator[List[U]]:
+    it = iter(iterable)
+    yield from takewhile(bool, ([*islice(it, n)] for _ in repeat(None)))
 
 
 def groupby(f: Callable[[U], R], xs: Iterable[U]) -> Dict[R, List[U]]:
@@ -14,14 +20,15 @@ def groupby(f: Callable[[U], R], xs: Iterable[U]) -> Dict[R, List[U]]:
     return r
 
 
-def dedup(xs: Iterable[U]) -> Iterator[U]:
+def dedup(xs: Iterable[U], on=lambda x: x) -> Iterator[U]:
     """
     Deduplicates an iterable. Any item is guaranteed to only occur once in the result.
     """
 
     seen = set()
     for x in xs:
-        if x in seen:
+        identity = on(x)
+        if identity in seen:
             continue
-        seen.add(x)
+        seen.add(identity)
         yield x
