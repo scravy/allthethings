@@ -16,6 +16,11 @@ class TestDateRange(unittest.TestCase):
         self.assertFalse(d1 < d2)
         self.assertTrue(d1 < d3)
 
+    def test_date_range_no_bounds(self):
+        d = DateRange("..")
+        self.assertEqual(None, d.min)
+        self.assertEqual(None, d.max)
+
     def test_date_range_contains(self):
         d = DateRange('2020-04-01,2020-05-01..2020-05-20,2020-06-01..')
         self.assertTrue('2019-03-31' not in d)
