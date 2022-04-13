@@ -7,7 +7,7 @@ def base_convert(s, from_base: int, to_base: int, alphabet="0123456789abcdefghij
             n += alphabet.index(digit) * p
             p *= from_base
     if n == 0:
-        return [0]
+        return '0'
     digits = []
     while n:
         digits.append(alphabet[n % to_base])
