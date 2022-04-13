@@ -1,4 +1,4 @@
-def base_convert(s, from_base: int, to_base: int, alphabet="0123456789abcdefghijklmnopqrstuvwxyz"):
+def base_convert(s, from_base: int, to_base: int, alphabet="0123456789abcdefghijklmnopqrstuvwxyz") -> str:
     s = str(s)
     n = 0
     p = 1

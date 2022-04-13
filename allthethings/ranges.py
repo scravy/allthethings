@@ -2,7 +2,7 @@ from datetime import date, timedelta
 from numbers import Number
 from typing import TypeVar, Optional, Union, Callable, Iterator, Type
 
-E = TypeVar('E')
+E = TypeVar('E', Number, date, covariant=True)
 
 
 def _range(lower: E, step: Callable[[E], E], condition: Callable[[E], bool]) -> Iterator[E]:
