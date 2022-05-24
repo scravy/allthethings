@@ -15,6 +15,8 @@ from .iterables import \
 from .ranges import \
     range_incl, \
     range_excl
+from .singleton import \
+    Singleton
 from .stopwatch import \
     Stopwatch
 
@@ -30,5 +32,6 @@ __all__ = [
     'dedup',
     'range_incl',
     'range_excl',
+    'Singleton',
     'Stopwatch',
 ]
